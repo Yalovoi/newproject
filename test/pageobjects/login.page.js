@@ -5,14 +5,11 @@ class LoginPage extends Page {
     get inputPassword () { return $('#normal_login_password') }
     get btnSubmit () { return $('.login-form-button') }
     setLogin(email){
-        this.inputUsername.setValue()
-
+        this.inputUsername.setValue(email);
     }
 
-    login (username, password) {
-        this.inputUsername.setValue(username);
-        this.inputPassword.setValue(password);
-        this.btnSubmit.click(); 
+    setPassword(password){
+        this.inputUsername.setValue(password);
     }
 
     open () {
