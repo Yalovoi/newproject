@@ -9,5 +9,3 @@ describe('Auth', () => {
         ProfilePage.isOpen();
     });
 });
-
-
