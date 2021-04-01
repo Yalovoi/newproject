@@ -24,12 +24,14 @@ describe('Auth', () => {
         LoginPage.setLogin('exemple@exemple.com');
         LoginPage.setPassword('123456789');
         LoginPage.clickSubmitButton();
-        ProfilePage.isOpen();
+        LoginPage.errorToastAppeared();
     });
-    it('login page is required', () => {
 
-    })
-
+    it('login input is required', () => {
+        LoginPage.setLogin('example');
+        LoginPage.emptyLoginInput();
+        LoginPage.loginReqiredError();
+    });
 });
 
 
